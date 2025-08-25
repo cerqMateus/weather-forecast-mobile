@@ -1,22 +1,9 @@
-import { currentWeather } from "./api/weather";
-import { Button } from "./components/ui/button";
-
-const obtainWeatherData = async (q: string) => {
-  try {
-    const data = await currentWeather(q);
-    console.log("Weather data obtained:", data);
-  } catch (error) {
-    console.error("Error obtaining weather data:", error);
-  }
-};
-
 function App() {
   return (
     <>
-      <p>Informações do tempo:</p>
-      <Button onClick={() => obtainWeatherData("London")}>
-        ver tempo atual
-      </Button>
+      <div className="flex h-screen w-full bg-gradient-to-tr from-[#4a93fe] via-[#49aaee] to-[#47bde0]">
+        <div className="mx-7 my-10"></div>
+      </div>
     </>
   );
 }
