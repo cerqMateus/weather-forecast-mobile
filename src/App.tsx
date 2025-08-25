@@ -1,4 +1,5 @@
 import { currentWeather } from "./api/weather";
+import { Button } from "./components/ui/button";
 
 const obtainWeatherData = async (q: string) => {
   try {
@@ -13,9 +14,9 @@ function App() {
   return (
     <>
       <p>Informações do tempo:</p>
-      <button onClick={() => obtainWeatherData("London")}>
+      <Button onClick={() => obtainWeatherData("London")}>
         ver tempo atual
-      </button>
+      </Button>
     </>
   );
 }
