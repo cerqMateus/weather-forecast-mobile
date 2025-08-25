@@ -1,7 +1,21 @@
+import { currentWeather } from "./api/weather";
+
+const obtainWeatherData = async (q: string) => {
+  try {
+    const data = await currentWeather(q);
+    console.log("Weather data obtained:", data);
+  } catch (error) {
+    console.error("Error obtaining weather data:", error);
+  }
+};
+
 function App() {
   return (
     <>
-      <p className="mt-8 bg-amber-200 text-3xl font-bold">oI</p>
+      <p>Informações do tempo:</p>
+      <button onClick={() => obtainWeatherData("London")}>
+        ver tempo atual
+      </button>
     </>
   );
 }
